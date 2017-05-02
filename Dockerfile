@@ -28,4 +28,5 @@ RUN sudo apt-get install -y mono-devel
 EXPOSE 5000
 RUN cd /home ; git clone https://github.com/OrchardCMS/Orchard2.git
 RUN cd /home/Orchard2 ; dotnet restore; dotnet build
-RUN cd /home/Orchard2/src/Orchard.Cms.Web ; dotnet run
+#RUN cd /home/Orchard2/src/Orchard.Cms.Web ; dotnet run
+RUN cd /home/Orchard2/src/Orchard.Cms.Web ; nohup dotnet run kestrel > /dev/null 2>&1 &
