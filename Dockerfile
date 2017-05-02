@@ -5,6 +5,7 @@ MAINTAINER Jasmin Savard
 
 RUN sudo apt-get update
 RUN sudo apt-get install -y gettext zip unzip git uuid-runtime
+RUN sudo apt-get install -y apt-transport-https
 
 #2 Add the new apt-get feed
 
@@ -17,7 +18,7 @@ RUN sudo apt-get update
 #3 Install .NET Core
 
 #RUN sudo apt-get install -y dotnet-dev-1.0.0-preview2-003121
-RUN sudo apt-get install dotnet-dev-1.0.1
+RUN sudo apt-get install -y dotnet-dev-1.0.1
 
 #4 Install Mono (Required by KoreBuild)
 
