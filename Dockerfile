@@ -27,5 +27,5 @@ RUN sudo apt-get install -y mono-devel
 #5 Get Orchard from Github repository
 RUN cd /home ; git clone https://github.com/OrchardCMS/Orchard2.git
 RUN cd /home/Orchard2 ; dotnet restore; dotnet build
-RUN cd /home/Orchard2/src/Orchard.Web ; dotnet run
+RUN cd /home/Orchard2/src/Orchard.Cms.Web ; dotnet run
 EXPOSE 5000
